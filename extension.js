@@ -26,7 +26,7 @@
                     'promete te dar arroz,feijao e pika',
                     'deu-lhe um biscoito de arco-íris feito com amor :heart:',
                     'deu-lhe um biscoito que foi esquecido na chuva... eu não comeria.',
-                    'quer te mostrar o biscoitao :trollface:'
+                    'quer te mostrar o biscoitao :trollface:',
                 ];
 
         bot.loadChat();
@@ -34,11 +34,11 @@
 
     
     localStorage.setItem("basicBotsettings", JSON.stringify({
-        botName: "Bot locasso",
+        botName: "Botlocasso",
         language: "portuguese",
         chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/pt.json",
         maximumAfk: 60,
-        afkRemoval: true,
+        afkRemoval: null,
         maximumDc: 60,
         bouncerPlus: true,
         lockdownEnabled: false,
@@ -63,7 +63,7 @@
             ],
         afkpositionCheck: 15,
         afkRankCheck: "ambassador",
-        motdEnabled: true,
+        motdEnabled: null,
         motdInterval: 8,
         motd: "!roulette",
         filterChat: true,
