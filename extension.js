@@ -9,49 +9,27 @@
 
         bot.retrieveSettings();
 
-        bot.commands.friendCommand = {
-        command: 'friend',
-        rank: 'user',
-        type: 'exact',
-        functionality: function (chat, cmd) {
-             if (this.type === 'exact' && chat.message.lenght !== cmd.lenght) return void (0);
-             if (!bot.commands.executable(this.rank, chat)) return void (0);
-             else {
-                 API.sendchat("Novo Sistema De Amigos http://blog.plug.dj/2014/10/friends-feature/?utm_content=buffercf974&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer");
-                 
-                }
-            }
+        bot.commands.cookieCommand.cookies =['deu-lhe um biscoito de chocolate!',
+                    'deu-lhe um biscoito de aveia caseiro macio!',
+                    'deu-lhe um biscoito podre e sujo. Era o último do pacote. Que nojo!',
+                    'deu-lhe um bolinho de açúcar... O quê? Sem estrelinhas e povilho? Eu não tocaria.',
+                    'deu-lhe um biscoito de chocolate. Oh, não, são passas. Eca!',
+                    'deu-lhe um enorme biscoito. Quando o toca, ele se duplica num outro biscoito... estranho',
+                    'deu-lhe um biscoito da sorte, tem escrito: "Por que você não está trabalhando?"',
+                    'deu-lhe um biscoito da sorte, tem escrito: "Cumprimente agora a pessoa que você ama"',
+                    'deu-lhe um biscoito da sorte, tem escrito: "Arrisque-se!"',
+                    'deu-lhe um biscoito da sorte, tem escrito: "Saia desse computador!"',
+                    'deu-lhe um biscoito da sorte, tem escrito: "Não esqueça de comer os vegetais"',
+                    'deu-lhe um biscoito da sorte, tem escrito: "Se você mecher o quadril, vão te achar sexy!',
+                    'deu-lhe um biscoito da sorte, tem escrito: "Eu te amo"',
+                    'deu-lhe um biscoito de ouro, mas não dá pra comer... Droga!',
+                    'deu-lhe um Oreo e um copo de leite.',
+                    'deu-lhe um biscoito de arco-íris feito com amor :heart:',
+                    'deu-lhe um biscoito que fio esquecido na chuva... eu não comeria.',
+                    'te trouxe biscoitos fresquinhos... parecem deliciosos!'
+                ];
+              
         };
-        
-        bot.commands.twitchCommand = {
-        command: 'twitch',
-        rank: 'user',
-        type: 'exact',
-        functionality: function (chat, cmd) {
-             if (this.type === 'exact' && chat.message.lenght !== cmd.lenght) return void (0);
-             if (!bot.commands.executable(this.rank, chat)) return void (0);
-             else {
-                 API.sendchat("Possível integração Twitch com Plug.Dj http://support.plug.dj/hc/communities/public/questions/200905295-Twitch-integration");
-                 
-             }
-        }
-    };
-    
-        bot.commands.techCommand = {
-        command: 'tech',  
-        rank: 'user', 
-        type: 'exact', 
-        functionality: function (chat, cmd) {
-            if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-            if (!bot.commands.executable(this.rank, chat)) return void (0);
-            else {
-                API.sendChat("Tech Blog com mais regularidade para informá-lo em quais erros os desenvolvedores estão trabalhando. http://tech.plug.dj/ ");
-                }
-            }
-             
-        
-                };
-
         bot.loadChat();
     }
 
@@ -61,7 +39,7 @@
         language: "portuguese",
         chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/pt.json",
         maximumAfk: 60,
-        afkRemoval: null,
+        afkRemoval: true,
         maximumDc: 60,
         bouncerPlus: true,
         lockdownEnabled: false,
@@ -70,11 +48,11 @@
         cycleGuard: true,
         maximumCycletime: 10,
         timeGuard: true,
-        maximumSongLength: 7,
+        maximumSongLength: 5,
         autodisable: true,
         commandCooldown: 3,
         usercommandsEnabled: true,
-        lockskipPosition: 1,
+        lockskipPosition: 3,
         lockskipReasons: [
                 ["tema", "A música não se encaixa nos padrões da sala. "],
                 ["op", "Essa música está na lista OP. "],
@@ -86,7 +64,7 @@
             ],
         afkpositionCheck: 15,
         afkRankCheck: "ambassador",
-        motdEnabled: null,
+        motdEnabled: true,
         motdInterval: 8,
         motd: "!roulette",
         filterChat: true,
@@ -95,9 +73,9 @@
         opLink: null,
         rulesLink: null,
         themeLink: null,
-        fbLink: "https://www.facebook.com/skrillex1000gr4u",
+        fbLink: "https://www.facebook.com/HUehaudhfuheuahs?ref=hl",
         youtubeLink: null,
-        website: "https://www.facebook.com/skrillex1000gr4u",
+        website: "https://www.facebook.com/HUehaudhfuheuahs?ref=hl",
         intervalMessages: [],
         messageInterval: 5,
         songstats: false,
