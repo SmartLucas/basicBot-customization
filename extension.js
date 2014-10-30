@@ -9,33 +9,7 @@
 
         bot.retrieveSettings();
 
-        bot.commands.friendCommand = {
-        command: 'friend',
-        rank: 'user',
-        type: 'exact',
-        functionality: function (chat, cmd) {
-             if (this.type === 'exact' && chat.message.lenght !== cmd.lenght) return void (0);
-             if (!bot.commands.executable(this.rank, chat)) return void (0);
-             else {
-                 API.sendchat("Novo Sistema De Amigos http://blog.plug.dj/2014/10/friends-feature/?utm_content=buffercf974&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer");
-                 
-                }
-            }
-        };
         
-        bot.commands.twitchCommand = {
-        command: 'twitch',
-        rank: 'user',
-        type: 'exact',
-        functionality: function (chat, cmd) {
-             if (this.type === 'exact' && chat.message.lenght !== cmd.lenght) return void (0);
-             if (!bot.commands.executable(this.rank, chat)) return void (0);
-             else {
-                 API.sendchat("Possível integração Twitch com Plug.Dj http://support.plug.dj/hc/communities/public/questions/200905295-Twitch-integration");
-                 
-             }
-        }
-    };
     
         bot.commands.techCommand = {
         command: 'tech',  
