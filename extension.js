@@ -31,7 +31,7 @@
 
     
     localStorage.setItem("basicBotsettings", JSON.stringify({
-        botName: "StratBot",
+        botName: "Started",
         language: "portuguese",
         chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/pt.json",
         maximumAfk: 60,
