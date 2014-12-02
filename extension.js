@@ -78,6 +78,7 @@
         commandLiteral: "!"
         blacklists: {
             NSFW: "https://rawgit.com/SmartLucas/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
+            OP: "https://rawgit.com/SmartLucas/basicBot-customization/master/blacklists/ExampleOPlist.json"
         }
     }));
 
