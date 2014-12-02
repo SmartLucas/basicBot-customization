@@ -76,6 +76,9 @@
         messageInterval: 5,
         songstats: false,
         commandLiteral: "!"
+        blacklists: {
+            NSFW: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
+        }
     }));
 
     $.getScript('https://rawgit.com/Yemasthui/basicBot/master/basicBot.js', extend);
