@@ -56,6 +56,20 @@
             }
         };
 
+        bot.commands.updateCommand = {
+        command: 'update',  
+        rank: 'mod', 
+        type: 'exact', 
+        functionality: function (chat, cmd) {
+            if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+            if (!bot.commands.executable(this.rank, chat)) return void (0);
+            else {
+                API.sendChat("Estamos atualizando o bot e o melhorando para vocês!");
+                API.sendChat("!kill");
+                }
+            }
+        };
+
         //Load the chat package again to account for any changes
         bot.loadChat();
 
