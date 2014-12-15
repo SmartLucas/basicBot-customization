@@ -53,7 +53,7 @@
     localStorage.setItem("basicBotsettings", JSON.stringify({
         botName: "Cursinho de Zoeira",
         language: "portuguese",
-        chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/pt.json",
+        chatLink: "https://rawgit.com/SmartLucas/basicBot/master/lang/pt.json",
         maximumAfk: 120,
         afkRemoval: false,
         maximumDc: 60,
