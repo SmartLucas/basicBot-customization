@@ -30,28 +30,15 @@
          }
          */
 
-        bot.commands.techCommand = {
-        command: 'tech',  
-        rank: 'user', 
-        type: 'exact', 
-        functionality: function (chat, cmd) {
-            if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-            if (!bot.commands.executable(this.rank, chat)) return void (0);
-            else {
-                API.sendChat("Tech Blog com mais regularidade para informá-lo em quais erros os desenvolvedores estão trabalhando. http://tech.plug.dj/ ");
-                }
-            }
-        };
-
-        bot.commands.nominateCommand = {
-        command: 'nominate',  
-        rank: 'user', 
-        type: 'exact', 
-        functionality: function (chat, cmd) {
-            if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-            if (!bot.commands.executable(this.rank, chat)) return void (0);
-            else {
-                API.sendChat("Nomeie sua comunidade aqui. http://bit.ly/1wwdOp0 ");
+        bot.commands.baconCommand = {
+            command: 'pistola',  //The command to be called. With the standard command literal this would be: !bacon
+            rank: 'user', //Minimum user permission to use the command
+            type: 'exact', //Specify if it can accept variables or not (if so, these have to be handled yourself through the chat.message
+            functionality: function (chat, cmd) {
+                if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                if (!bot.commands.executable(this.rank, chat)) return void (0);
+                else {
+                    API.sendChat("/me Tá PISTOLA!?!?!");
                 }
             }
         };
@@ -60,13 +47,15 @@
         bot.loadChat();
 
     }
-   
+
+    //Change the bots default settings and make sure they are loaded on launch
+
     localStorage.setItem("basicBotsettings", JSON.stringify({
-        botName: "SkyBot",
+        botName: "Cursinho de Zoeira",
         language: "portuguese",
         chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/pt.json",
         maximumAfk: 120,
-        afkRemoval: true,
+        afkRemoval: false,
         maximumDc: 60,
         bouncerPlus: true,
         lockdownEnabled: false,
@@ -75,41 +64,41 @@
         cycleGuard: true,
         maximumCycletime: 10,
         timeGuard: true,
-        maximumSongLength: 10,
-        autodisable: true,
+        maximumSongLength: 06,
+        autodisable: false,
         commandCooldown: 30,
         usercommandsEnabled: true,
         lockskipPosition: 3,
         lockskipReasons: [
-            ["theme", "This song does not fit the room theme. "],
+            ["theme", "Esse video não combina com o tema da sala. "],
             ["op", "This song is on the OP list. "],
-            ["history", "This song is in the history. "],
-            ["mix", "You played a mix, which is against the rules. "],
-            ["sound", "The song you played had bad sound quality or no sound. "],
-            ["nsfw", "The song you contained was NSFW (image or sound). "],
-            ["unavailable", "The song you played was not available for some users. "]
+            ["history", "Esse video está no historico. "],
+            ["mix", "Você tocou um mix, é contra as regras da sala. "],
+            ["sound", "O video que você tocou tem uma qualidade ruim, ou não tem nada. "],
+            ["nsfw", "Esse video contém NSFW (imagem). "],
+            ["bug", "O video que você botou não está liberado para alguns usuarios. "]
         ],
         afkpositionCheck: 15,
         afkRankCheck: "ambassador",
         motdEnabled: false,
         motdInterval: 5,
-        motd: "Temporary Message of the Day",
-        filterChat: true,
+        motd: "Bem vindo delicias",
+        filterChat: false,
         etaRestriction: false,
-        welcome: true,
+        welcome: false,
         opLink: null,
-        rulesLink: null,
+        rulesLink: "http://goo.gl/6RP5x1",
         themeLink: null,
-        fbLink: null,
+        fbLink: "https://www.facebook.com/groups/zoeiraneverandsplug/",
         youtubeLink: null,
-        website: null,
+        website: "https://8chan.co/exercito/",
         intervalMessages: [],
         messageInterval: 5,
-        songstats: true,
+        songstats: false,
         commandLiteral: "!",
         blacklists: {
-            NSFW: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
-            OP: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/ExampleOPlist.json"
+            NSFW: "https://raw.githubusercontent.com/B1G-B0SS/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
+            OP: "https://raw.githubusercontent.com/B1G-B0SS/basicBot-customization/master/blacklists/ExampleOPlist.json"
         }
     }));
 
