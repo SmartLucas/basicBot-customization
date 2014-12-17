@@ -38,10 +38,11 @@
             if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
             if (!bot.commands.executable(this.rank, chat)) return void (0);
             else {
-                API.sendChat("Tech Blog com mais regularidade para informá-lo em quais erros os desenvolvedores estão trabalhando. http://tech.plug.dj/ ");
+            API.sendChat("Tech Blog com mais regularidade para informá-lo em quais erros os desenvolvedores estão trabalhando. http://tech.plug.dj/");
                 }
             }
         };
+
 
         bot.commands.baconCommand = {
             command: 'pistola',  //The command to be called. With the standard command literal this would be: !bacon
