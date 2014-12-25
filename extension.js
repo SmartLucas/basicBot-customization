@@ -44,15 +44,15 @@
         };
 
 
-        bot.commands.baconCommand = {
-            command: 'pistola',  //The command to be called. With the standard command literal this would be: !bacon
+        bot.commands.deliciaCommand = {
+            command: 'delicia',  //The command to be called. With the standard command literal this would be: !bacon
             rank: 'user', //Minimum user permission to use the command
             type: 'exact', //Specify if it can accept variables or not (if so, these have to be handled yourself through the chat.message
             functionality: function (chat, cmd) {
                 if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                 if (!bot.commands.executable(this.rank, chat)) return void (0);
                 else {
-                    API.sendChat("/me Tá PISTOLA!?!?!");
+                    API.sendChat("/me AI QUE DELICIA!");
                 }
             }
         };
@@ -65,7 +65,7 @@
     //Change the bots default settings and make sure they are loaded on launch
 
     localStorage.setItem("basicBotsettings", JSON.stringify({
-        botName: "Cursinho de Zoeira",
+        botName: "SkyBot",
         language: "portuguese",
         chatLink: "https://rawgit.com/SmartLucas/basicBot/master/lang/pt.json",
         maximumAfk: 120,
@@ -103,16 +103,16 @@
         opLink: null,
         rulesLink: "http://goo.gl/6RP5x1",
         themeLink: null,
-        fbLink: "https://www.facebook.com/groups/zoeiraneverandsplug/",
+        fbLink: "https://www.facebook.com/pages/theskyway1",
         youtubeLink: null,
-        website: "https://8chan.co/exercito/",
+        website: "",
         intervalMessages: [],
         messageInterval: 5,
         songstats: false,
         commandLiteral: "!",
         blacklists: {
-            NSFW: "https://raw.githubusercontent.com/B1G-B0SS/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
-            OP: "https://raw.githubusercontent.com/B1G-B0SS/basicBot-customization/master/blacklists/ExampleOPlist.json"
+            NSFW: "https://raw.githubusercontent.com/Yemasthui/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
+            OP: "https://raw.githubusercontent.com/Yemasthui/basicBot-customization/master/blacklists/ExampleOPlist.json"
         }
     }));
 
