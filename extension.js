@@ -29,7 +29,7 @@
          }
          }
          */
-
+        /*
         bot.commands.techCommand = {
         command: 'tech',  
         rank: 'user', 
@@ -42,7 +42,7 @@
                 }
             }
         };
-
+*/
 
         bot.commands.deliciaCommand = {
             command: 'delicia',  //The command to be called. With the standard command literal this would be: !bacon
